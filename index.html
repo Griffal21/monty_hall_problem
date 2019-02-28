@@ -14,22 +14,33 @@
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <span class="navbar-text">
-        <h1>Let's Make a Deal!</h1>
+      <h1>Let's Make a Deal!</h1>
     </span>
-    <button type="button" class="btn btn-secondary" id="reset">Reset</button>
   </nav>
 
   <div class="container" id="start">
     <div class="jumbotron">
       <div class="row">
         <div class="col-9">
-          <p>You are given a choice of 3 doors, opening the correct door wins the game. Once a door is chosen one of
+          <p class="guessButton">You are given a choice of 3 doors, opening the correct door wins the game. Once a door
+            is chosen one of
             the
             two remaining doors will be revealed to be
             an incorrect door. You are then given a choice to stay with your origional door or to change your door to
             the
             remaining one.
           </p>
+          <p class="hiddenP SorSBtn OpenDoor1">I have just Door 1 to show it had no prize behind it. Now
+            I give you a choice, would you like to stick with your origional door or switch to the remaining closed door?
+          </p>
+          <p class="hiddenP SorSBtn OpenDoor2">I have just Door 2 to show it had no prize behind it. Now
+              I give you a choice, would you like to stick with your origional door or switch to the remaining closed door?
+          </p>
+          <p class="hiddenP SorSBtn OpenDoor3">I have just Door 3 to show it had no prize behind it. Now
+              I give you a choice, would you like to stick with your origional or switch to the remaining closed door?
+          </p>
+          <p class="YouWin">You Win!</p>
+          <p class="YouLose">You Lose!</p>
         </div>
         <div class="card col-3">
           <div class="stay" id="stayWinDiv"></div>
@@ -48,7 +59,11 @@
           <div class="imgRight" id="right1"><img src="./assets/images/openWinner.jpg" class="card-img-top" alt="..."></div>
           <div class="card-body">
             <hr class="my-4">
-            <button type="button" class="btn btn-primary guessButton" id="door1">Door 1</button>
+            <button type="button" class="btn btn-primary guessButton" id="door1">Choose Door 1</button>
+            <button type="button" class="btn btn-success SorSBtn stay" id="stay1">Stay With Door 1</button>
+            <button type="button" class="btn btn-dark SorSBtn switch" id="switch1">Switch To Door 1</button>
+            <button type="button" class="btn btn-secondary reset">Reset</button>
+            <p class="SorSBtn OpenDoor1">Door number one does not contain a prize.</p>
           </div>
         </div>
 
@@ -58,7 +73,11 @@
           <div class="imgRight" id="right2"><img src="./assets/images/openWinner.jpg" class="card-img-top" alt="..."></div>
           <div class="card-body">
             <hr class="my-4">
-            <button type="button" class="btn btn-warning guessButton" id="door2">Door 2</button>
+            <button type="button" class="btn btn-warning guessButton" id="door2">Choose Door 2</button>
+            <button type="button" class="btn btn-success SorSBtn stay" id="stay2">Stay With Door 2</button>
+            <button type="button" class="btn btn-dark SorSBtn switch" id="switch2">Switch To Door 2</button>
+            <button type="button" class="btn btn-secondary reset">Reset</button>
+            <p class="SorSBtn OpenDoor2">Door number two does not contain a prize.</p>
           </div>
         </div>
 
@@ -68,14 +87,18 @@
           <div class="imgRight" id="right3"><img src="./assets/images/openWinner.jpg" class="card-img-top" alt="..."></div>
           <div class="card-body">
             <hr class="my-4">
-            <button type="button" class="btn btn-danger guessButton" id="door3">Door 3</button>
+            <button type="button" class="btn btn-danger guessButton" id="door3">Choose Door 3</button>
+            <button type="button" class="btn btn-success SorSBtn stay" id="stay3">Stay With Door 3</button>
+            <button type="button" class="btn btn-dark SorSBtn switch" id="switch3">Switch To Door 3</button>
+            <button type="button" class="btn btn-secondary reset">Reset</button>
+            <p class="SorSBtn OpenDoor3">Door number three does not contain a prize.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container" id="choice">
+  <!-- <div class="container" id="choice">
     <div class="jumbotron">
       <p>I have just revealed an incorrect door you did not choose.  Now I offer you a choice, you can stay with the door you chose or change your door to the other closed door.  If you stay with your door you have a 1/3 chance in winning.  If you change your door you have a 2/3 chance of winning.
         <br>
@@ -85,7 +108,7 @@
       <button type="button" class="btn btn-success" id="stay">Stay</button>
       <button type="button" class="btn btn-dark" id="switch">Switch</button>
     </div>
-  </div>
+  </div> -->
 
 
 
