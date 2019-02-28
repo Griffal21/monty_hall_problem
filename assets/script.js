@@ -128,7 +128,224 @@ $(document).ready(function () {
   }); //door number one
 
 
+//door number two is chosen
+$("#door2").on("click", function (event) {
+  event.preventDefault();
+  var gate = true;
+  console.log("door2");
+  $(".guessButton").hide();
+  corDoor = Math.floor(Math.random() * 3) + 1;
+  console.log("correct door: " + corDoor);
 
+  if (corDoor === 2) {
+    let showDoor = Math.floor(Math.random() * 2);
+    console.log("showDoor: " + showDoor);
+    if (showDoor === 1) {
+      $("#guess1").hide();
+      $("#wrong1").show();
+      $("#choice").show();
+    } else {
+      $("#guess3").hide();
+      $("#wrong3").show();
+      $("#choice").show();
+    }
+  } else if (corDoor === 1) {
+
+    $("#guess3").hide();
+    $("#wrong3").show();
+    $("#choice").show();
+  } else {
+
+    $("#guess1").hide();
+    $("#wrong1").show();
+    $("#choice").show();
+  }
+
+  $("#stay").on("click", function (event) {
+    event.preventDefault();
+    if (gate) {
+    if (corDoor === 2) {
+      $(".imgGuess").hide();
+      $("#right2").show();
+      $("#wrong1").show();
+      $("#wrong3").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      stayWin++;
+      alert("You win!");
+    } else if (corDoor === 1) {
+      $(".imgGuess").hide();
+      $("#wrong2").show();
+      $("#right1").show();
+      $("#wrong3").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      stayLoss++;
+      alert("You lost :(");
+    } else {
+      $(".imgGuess").hide();
+      $("#wrong1").show();
+      $("#wrong2").show();
+      $("#right3").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      stayLoss++;
+      alert("You lost :(");
+    }
+  }
+  }); //#stay
+
+  $("#switch").on("click", function (event) {
+    event.preventDefault();
+    if (gate) {
+    if (corDoor === 2) {
+      $(".imgGuess").hide();
+      $("#right2").show();
+      $("#wrong1").show();
+      $("#wrong3").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      switchLoss++;
+      alert("You lost :(");
+    } else if (corDoor === 1) {
+      $(".imgGuess").hide();
+      $("#wrong2").show();
+      $("#right1").show();
+      $("#wrong3").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      switchWin++;
+      alert("You win!");
+    } else {
+      $(".imgGuess").hide();
+      $("#wrong1").show();
+      $("#wrong2").show();
+      $("#right3").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      switchWin++;
+      alert("You win!");
+    }
+  }
+  }); //#switch
+
+}); //door number two
+
+
+//door number three is chosen
+$("#door3").on("click", function (event) {
+  event.preventDefault();
+  var gate = true;
+  console.log("door3");
+  $(".guessButton").hide();
+  corDoor = Math.floor(Math.random() * 3) + 1;
+  console.log("correct door: " + corDoor);
+
+  if (corDoor === 3) {
+    let showDoor = Math.floor(Math.random() * 2);
+    console.log("showDoor: " + showDoor);
+    if (showDoor === 1) {
+      $("#guess2").hide();
+      $("#wrong2").show();
+      $("#choice").show();
+    } else {
+      $("#guess1").hide();
+      $("#wrong1").show();
+      $("#choice").show();
+    }
+  } else if (corDoor === 2) {
+
+    $("#guess1").hide();
+    $("#wrong1").show();
+    $("#choice").show();
+  } else {
+
+    $("#guess2").hide();
+    $("#wrong2").show();
+    $("#choice").show();
+  }
+
+  $("#stay").on("click", function (event) {
+    event.preventDefault();
+    if (gate) {
+    if (corDoor === 3) {
+      $(".imgGuess").hide();
+      $("#right3").show();
+      $("#wrong2").show();
+      $("#wrong1").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      stayWin++;
+      alert("You win!");
+    } else if (corDoor === 2) {
+      $(".imgGuess").hide();
+      $("#wrong3").show();
+      $("#right2").show();
+      $("#wrong1").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      stayLoss++;
+      alert("You lost :(");
+    } else {
+      $(".imgGuess").hide();
+      $("#wrong3").show();
+      $("#wrong2").show();
+      $("#right1").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      stayLoss++;
+      alert("You lost :(");
+    }
+  }
+  }); //#stay
+
+  $("#switch").on("click", function (event) {
+    event.preventDefault();
+    if (gate) {
+    if (corDoor === 3) {
+      $(".imgGuess").hide();
+      $("#right3").show();
+      $("#wrong2").show();
+      $("#wrong1").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      switchLoss++;
+      alert("You lost :(");
+    } else if (corDoor === 2) {
+      $(".imgGuess").hide();
+      $("#wrong3").show();
+      $("#right2").show();
+      $("#wrong1").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      switchWin++;
+      alert("You win!");
+    } else {
+      $(".imgGuess").hide();
+      $("#wrong3").show();
+      $("#wrong2").show();
+      $("#right1").show();
+      $("#reset").show();
+      $("#choice").hide();
+      gate = false;
+      switchWin++;
+      alert("You win!");
+    }
+  }
+  }); //#switch
+
+}); //door number three
 
 
 
